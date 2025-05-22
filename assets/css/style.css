@@ -4,71 +4,95 @@
   src: url("/assets/font/yekan-font/yekan-regular.ttf");
 }
 
-* {
-  margin: 0;
-  padding: 0;
+*{
   font-family: yekan;
 }
 
-/* سلکتورهای پایه یا ابتدایی */
-
-/* div {
-  color: black;
+/* تعاملی - Interactive */
+button:hover {
+  background-color: lightblue;
 }
 
-.class {
-  color: black;
+button:active {
+  background-color: orange;
 }
 
-#id {
-  color: black;
-} */
-
-/* سلکتور ترکیبی */
-
-/* .box .title {
-  display: inline-block;
+input:focus {
+  border: 5px solid green;
 }
 
-#card p {
-  display: inline-block;
-}
 
-div span {
-  display: inline-block;
-} */
-
-/* سلکتورهای گروهی */
-
-/* h1 , h2 , h3 {
- border-radius: 50%;
-}
-
-.btn, .link{
- border-radius: 50%;
-} */
-
-/* .menu{
-  margin-left: 2rem;
-}
-
-.menu > strong {
+/* ساختاری - Structural */
+.structure li:first-child {
   color: red;
 }
 
-.menu div + span{
-  color: blue;
+.structure li:last-child {
+  font-weight: bold;
 }
 
-.menu div ~ span{
+.structure li:nth-child(2) {
+  background-color: lightblue;
+}
+.structure li:nth-child(3) {
+  background-color: rgb(8, 0, 255);
+}
+.structure li:nth-child(4) {
+  background-color: rgb(255, 242, 0);
+}
+
+/* فرم‌ها - Form States */
+input{
+  padding: 5px;
+  font-size: 15px;
+  font-weight: bolder;
+}
+.form-states input:checked {accent-color: green;}
+
+.form-states input:disabled {
+  background-color: #a3a3a3 !important;
+}
+
+.form-states input:required { border: 5px solid }
+
+.form-states input:optional {
+  border: 5px solid green;
+}
+
+.form-states input:read-only {
+  background-color: rgb(238, 255, 0);
+}
+
+.form-states input:placeholder-shown {
+  border-color: rgb(0, 255, 0);
+  color: gray;
+}
+
+/* منطقی و وضعیتی - Logical & Special */
+.logic div:not(.box) {
+  background-color: yellow;
+}
+:root {
+  --main-color: teal;
+  --width: 300px;
+}
+
+.logic p {
+  color: var(--main-color);
+  background-color: aqua;
+  width: var(--width);
+}
+
+
+
+
+/* لینک‌ها */
+.links a:link {
   color: blue;
-} */
-
-
-
-
-input[class*= "test1"]{
-  background-color: red;
+  font-size: 20px;
+}
+.links a:visited {
+  color: rgb(0, 0, 0);
 }
 
 
@@ -76,31 +100,8 @@ input[class*= "test1"]{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* سایر سلکتور های ترکیبی */
-/* سلکتورهای ویژگی (Attribute Selectors) */
-/* سلکتورهای حالت یا شبه کلاس : (Pseudo-classes) */
-/* Pseudo-elements سلکتور های شبه المان  :: */
+/* پیشرفته */
+.advanced section:has(img) {
+  border: 2px solid green;
+  background-color: aqua;
+}
