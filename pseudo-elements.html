@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مثال‌های شبه المان‌های CSS</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- ::before Example -->
+        <div class="box">
+            <h3>نشانگر اعلان (::before)</h3>
+            <div class="notification-box">
+                پیام‌های جدید دارید
+            </div>
+        </div>
+
+        <!-- ::after Example -->
+        <div class="box">
+            <h3>جعبه اطلاعات با راهنما (::after)</h3>
+            <div class="info-box">
+                روی این جعبه هاور کنید
+            </div>
+        </div>
+
+        <!-- ::first-letter Example -->
+        <div class="box">
+            <h3>کارت با حرف اول متفاوت</h3>
+            <div class="card">
+                <h4 class="card-title">به وب‌سایت ما خوش آمدید</h4>
+                <p>این یک نمونه کارت با حرف اول متفاوت است.</p>
+            </div>
+        </div>
+
+        <!-- ::first-line Example -->
+        <div class="box">
+            <h3>جعبه خبر با خط اول متفاوت</h3>
+            <div class="news-box">
+                <p>خبر فوری: این یک نمونه خبر است. خط اول این متن با بقیه متفاوت خواهد بود. این مثال نشان می‌دهد که چگونه می‌توان از شبه المان ::first-line استفاده کرد.</p>
+            </div>
+        </div>
+
+        <!-- ::selection Example -->
+        <div class="box">
+            <h3>جعبه کد با انتخاب سفارشی</h3>
+            <div class="code-box">
+                این متن را انتخاب کنید تا استایل انتخاب سفارشی را ببینید.
+                const greeting = "سلام دنیا";
+                console.log(greeting);
+            </div>
+        </div>
+
+        <!-- ::marker Example -->
+        <div class="box">
+            <h3>لیست ویژگی‌ها با نشانگر سفارشی</h3>
+            <ul class="feature-list">
+                <li>طراحی واکنش‌گرا</li>
+                <li>کامپوننت‌های مدرن</li>
+                <li>پشتیبانی از همه مرورگرها</li>
+            </ul>
+        </div>
+
+        <!-- ::placeholder Example -->
+        <div class="box">
+            <h3>جعبه جستجو با متن راهنما</h3>
+            <div class="search-container">
+                <input type="text" class="search-box" placeholder="جستجو کنید...">
+            </div>
+        </div>
+
+        <!-- ::backdrop Example -->
+        <div class="box">
+            <h3>مثال backdrop در مودال</h3>
+            <button class="modal-button" onclick="openModal()">نمایش مودال</button>
+        </div>
+    </div>
+
+    <!-- Modal with backdrop -->
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <h3>این یک مودال با backdrop است</h3>
+            <p>شبه المان ::backdrop برای ایجاد پس‌زمینه تیره و محو شده در پشت مودال استفاده می‌شود.</p>
+            <p>این یک مثال کاربردی از استفاده backdrop-filter برای ایجاد افکت محو شدن است.</p>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById('myModal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').classList.remove('active');
+        }
+
+        // بستن مودال با کلیک خارج از آن
+        window.onclick = function(event) {
+            const modal = document.getElementById('myModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+
+</html>

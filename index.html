@@ -10,58 +10,63 @@
 
 <body>
 
-  <!-- <h2>🔵 تعاملی</h2>
-  <button>روی من هاور یا کلیک کن</button>
-  <div class="focus-area">
-    <input type="text" placeholder="روی من کلیک کن">
+
+  <!-- ::before Example -->
+  <div class="box">
+    <h3>نشانگر اعلان (::before)</h3>
+    <div class="notification-box">
+      پیام‌های جدید دارید
+    </div>
   </div>
 
-   <h2>🟢 ساختاری</h2>
-  <ul class="structure">
-    <li>آیتم ۱</li>
-    <li>آیتم ۲</li>
-    <li>آیتم ۳</li>
-    <li>آیتم ۳</li>
-    <li>آیتم ۳</li>
-    <li>آیتم ۳</li>
-    <li>آیتم ۳</li>
+  <!-- ::after Example -->
+  <div class="box">
+    <h3>جعبه اطلاعات با راهنما (::after)</h3>
+    <div class="info-box">
+      روی این جعبه هاور کنید
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <p class="description">
+    این یک متن<br> آزمایشی برای بررسی شبه‌المان‌های ::first-line و ::first-letter است. می‌تونی همین متن رو انتخاب کنی تا
+    استایل ::selection رو هم ببینی.
+  </p>
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+   <ul>
+    <li>آیتم اول</li>
+    <li>آیتم دوم</li>
   </ul>
 
 
 
 
-  <h2>🟣 فرم‌ها</h2>
-  <div class="form-states">
-    <input id="input1" type="checkbox" checked>
-    <label for="input1"> تیک خورده</label><br>
-    <input type="checkbox"> 
-    <label>تیک نخورده</label><br><br>
-
-    <input type="text" disabled value="غیرفعال"><br> <br>
-    <input type="text" required value="اجباری"><br> <br>
-    <input type="text" value="اختیاری"><br> <br>
-    <input type="text" value="فقط خواندنی" readonly><br> <br>
-    <input type="text" placeholder="با placeholder"><br> <br>
-  </div>
-
-
-
-
-
-
-  <h2>🟠 منطقی و وضعیتی</h2>
-  <div class="logic">
-    <div class="box">با کلاس box</div>
-    <div>بدون کلاس</div>
-    <br>
-    <p>متن رنگی با استفاده از :root</p>
-  </div>
-
-  <h2>🟡 لینک‌ها</h2>
-  <div class="links">
-    <a href="https://example.com" target="_blank">لینک بازنشده</a><br>
-    <a href="https://google.com" target="_blank">لینک بازدیدشده</a>
-  </div> -->
 
 
 
@@ -72,22 +77,14 @@
 
 
 
+  <br />
+  <button onclick="document.getElementById('myDialog').showModal()">باز کردن مودال</button>
 
-
-
-
-
-  <h2>🔴 پیشرفته</h2>
-  <div class="advanced">
-    <section>
-      <p>این بخش عکس دارد</p>
-    </section>
-    <section>
-      <img src="/assets/images/HTML5.png" width="40px" alt="عکس تستی">
-      <p>این بخش عکس ندارد</p> 
-    </section>
-  </div>
-
+  <dialog id="myDialog">
+    این یک مودال ساده است. برای تست ::backdrop از بیرون کلیک کن.
+    <br><br>
+    <button onclick="document.getElementById('myDialog').close()">بستن</button>
+  </dialog>
 
 
 </body>
