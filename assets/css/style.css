@@ -25,59 +25,59 @@
 body {
   font-family: sans-serif;
   direction: rtl;
-  padding: 2rem;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: 5fr repeat(2, 1fr);
-  grid-template-rows: repeat(2, 150px);
-  gap: 10px;
-  background-color: #eee;
-  border: 2px solid #333;
-  height: 500px;
-  padding: 10px;
-
-  /* مقادیر قابل تغییر برای تمرین */
-  /* align-items: center;
-  justify-items: center; */
-  align-content: center;
-  justify-content: center;
-}
-
-.item {
-  background-color: #58f7ff;
-  padding: 1rem;
+  background: #f0f0f0;
   display: flex;
-  align-items: center;
   justify-content: center;
-  font-weight: bold;
-  border-radius: 8px;
-}
-.item:nth-child(1)  {
-  background-color: var(--primary-color);
-}
-.item:nth-child(2) {
-  background-color: var(--secondary-color);
-}
-.item:nth-child(3) {
-  background-color: var(--tertiary-color);
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
 }
 
-.item:nth-child(4) {
-  background-color: var(--quaternary-color);
-}
-.item:nth-child(5) {
-  background-color: var(--quinary-color);
-}
-.item:nth-child(6) {
-  background-color: var(--senary-color);
+.card {
+  position: relative;
+  width: 250px;
+  height: 300px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
+.card h3 {
+  padding: 20px;
+  margin: 0;
+  font-size: 1.4rem;
+  text-align: center;
+}
 
+.card p {
+  padding: 0 20px;
+  font-size: 0.95rem;
+  text-align: center;
+  color: #555;
+}
 
-img {
-  max-width:  150PX;
-  /* height: 100%; */
-  object-fit: cover;
+/* after برای لایه تصویری */
+.card::after {
+  content: url('https://picsum.photos/id/237/300/300');
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+/* نمایش لایه after هنگام هاور */
+.card:hover::after {
+  opacity: 1;
+}
+
+/* محتوای کارت در زیر تصویر قرار بگیرد */
+.card * {
+  position: relative;
+  z-index: 2;
 }
