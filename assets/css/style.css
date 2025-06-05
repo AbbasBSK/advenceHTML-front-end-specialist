@@ -17,78 +17,56 @@
   font-family: yekan;
 }
 
-body {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
 
 
 .scene {
-    width: 300px;
-    height: 200px;
-    margin: 60px auto;
-    perspective: 1000px;
+  width: 200px;
+  height: 200px;
+  perspective: 600px; /* عمق دید */
+  margin: 100px auto;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d; /* فعال‌سازی حالت سه‌بعدی */
+  transform: rotateX(-30deg) rotateY(30deg);
+  animation: rotateCube 10s infinite linear;
+}
+
+.face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: rgba(0, 128, 255, 0.7);
+  border: 2px solid #fff;
+  line-height: 200px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  backface-visibility: hidden;
+}
+
+
+  /* تعیین موقعیت هر وجه ************/
+  .front  { transform: translateZ(100px); }
+  .back   { transform: rotateY(180deg) translateZ(100px); }
+  .right  { transform: rotateY(90deg) translateZ(100px); }
+  .left   { transform: rotateY(-90deg) translateZ(100px); }
+  .top    { transform: rotateX(90deg) translateZ(100px); }
+  .bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+
+
+  @keyframes rotateCube {
+    from {
+      transform: rotateX(0deg) rotateY(0deg);
+    }
+    to {
+      transform: rotateX(360deg) rotateY(360deg);
+    }
   }
-  
-  .card3D {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-  }
-
-  .scene:hover .card3D{ 
-    transform: rotateY(180deg);
-  }
-
-  
-  
-  .card-face {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 26px;
-    border-radius: 12px;
-    color: var(--header-bg);
-    overflow: hidden;
-    position: absolute;
-    backface-visibility: hidden;
-  }
-  
-  .card-face img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .front {
-    background: var(--primary-color);
-  }
-  
-  .back {
-    background: var(--tertiary-color);
-    transform: rotateY(180deg);
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
