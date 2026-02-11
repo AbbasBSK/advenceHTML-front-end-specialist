@@ -1,4 +1,5 @@
 @use "../base/variables";
+@use "../base/functions.scss";
 
 .card {
   background: variables.$light;
@@ -15,4 +16,9 @@
     color: #555;
     margin-bottom: 12px;
   }
+}
+
+.main_card {
+  padding: functions.to-rem(100px); // 20px
+  border-radius: functions.space(3); // 12px
 }

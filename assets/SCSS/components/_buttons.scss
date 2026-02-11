@@ -1,6 +1,40 @@
+@use "../base/functions.scss";
+@use "../base/mixins.scss";
+@use "../base/variables";
+
 .btn {
-  padding: 12px 16px;
+  padding: functions.space(3) functions.space(4);
   border: none;
-  border-radius: 8px;
+  border-radius: variables.$radius;
   cursor: pointer;
+  font-size: functions.to-rem(16px);
+}
+
+// .btn_base {
+//   padding: 10px 20px;
+//   border-radius: 8px;
+// }
+
+%btn-base2 {
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.btn-primary {
+  @extend %btn-base2;
+  background: variables.$primary;
+  color: variables.$light;
+}
+
+.btn-dark {
+  background: variables.$dark;
+  color: variables.$light;
+}
+
+.btn-light {
+  @include mixins.button-theme(#ffffff);
+}
+
+.btn-dark {
+  @include mixins.button-theme(#1e1e1e);
 }
