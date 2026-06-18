@@ -1,24 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SASS & SCSS</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sass Project</title>
+
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
-  <div class="scene bg-danger">
-    <div class="cube">
-      <div class="face front ">Front</div>
-      <div class="face back">Back</div>
-      <div class="face right">Right</div>
-      <div class="face left">Left</div>
-      <div class="face top">Top</div>
-      <div class="face bottom">Bottom</div>
+  <div class="container">
+    <h1 class="section-title">
+      دوره های برنامه نویسی
+    </h1>
+    <div class="courses">
+      <div class="course-card">
+        <img class="course-image" src="/assets/images/react.webp" alt="" />
+        <div class="course-body">
+          <h2 class="course-title">
+            React
+          </h2>
+          <p class="course-description">
+            آموزش جامع ری اکت از مقدماتی تا پیشرفته
+          </p>
+          <div class="course-price">
+            2,500,000 تومان
+          </div>
+          <div class="course-status">
+            ثبت نام باز
+          </div>
+          <button class="btn mt-2">
+            خرید دوره
+          </button>
+        </div>
+      </div>
+      <div class="course-card">
+        <img class="course-image" src="/assets/images/js.jpg" alt="" />
+        <div class="course-body">
+          <h2 class="course-title">
+            JavaScript
+          </h2>
+          <p class="course-description">
+            آموزش کامل جاوااسکریپت کاربردی
+          </p>
+          <div class="course-price">
+            1,900,000 تومان
+          </div>
+          <div class="course-status">
+            ثبت نام باز
+          </div>
+          <button class="btn mt-2">
+            خرید دوره
+          </button>
+        </div>
+      </div>
+      <div class="course-card">
+        <img class="course-image" src="/assets/images/type.webp" alt="" />
+        <div class="course-body">
+          <h2 class="course-title">
+            TypeScript
+          </h2>
+          <p class="course-description">
+            یادگیری تایپ اسکریپت برای پروژه های واقعی
+          </p>
+          <div class="course-price">
+            1,700,000 تومان
+          </div>
+          <div class="course-status">
+            ثبت نام باز
+          </div>
+          <button class="btn mt-2">
+            خرید دوره
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
+      <!-- feature elements -->
+    <section class="features">
 
+      <h2 class="features_title">
+        مزایای آموزش با ما
+      </h2>
+
+      <div class="features_items">
+
+        <div class="features_item">
+          پروژه محور
+        </div>
+
+        <div class="features_item">
+          پشتیبانی دائمی
+        </div>
+
+        <div class="features_item">
+          آموزش به روز
+        </div>
+
+      </div>
+
+    </section>
+  </div>
 </body>
 
 </html>

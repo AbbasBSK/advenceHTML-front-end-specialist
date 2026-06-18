@@ -1,0 +1,213 @@
+@charset "UTF-8";
+/*
+|--------------------------------------------------------------------------
+| Abstracts
+|--------------------------------------------------------------------------
+*/
+/*
+|--------------------------------------------------------------------------
+| Base
+|--------------------------------------------------------------------------
+*/
+/*
+|--------------------------------------------------------------------------
+| Reset
+|--------------------------------------------------------------------------
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: yekan;
+}
+
+@font-face {
+  font-family: yekan;
+  src: url("/assets/font/yekan-font/yekan-regular.woff");
+}
+/*
+|--------------------------------------------------------------------------
+| Layout
+|--------------------------------------------------------------------------
+*/
+/*
+|--------------------------------------------------------------------------
+| Courses Section
+|--------------------------------------------------------------------------
+*/
+body {
+  background-color: #f5f7fb;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 10px auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #4f46e5;
+}
+
+.courses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .courses {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*
+|--------------------------------------------------------------------------
+| Features Section
+|--------------------------------------------------------------------------
+*/
+.features {
+  margin-top: 60px;
+}
+.features_title {
+  text-align: center;
+  color: #4f46e5;
+  margin-bottom: 30px;
+}
+.features_items {
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .features_items {
+    flex-direction: column;
+  }
+}
+.features_item {
+  background: white;
+  flex: 1;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Components
+|--------------------------------------------------------------------------
+*/
+/*
+|--------------------------------------------------------------------------
+| Card Component
+|--------------------------------------------------------------------------
+*/
+/*
+| شرط Sass
+| کافی است مقدار status را تغییر بدهیم
+*/
+.course-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+.course-card:hover {
+  transform: scale(1.1);
+}
+.course-card .course-image {
+  width: 100%;
+  display: block;
+}
+.course-card .course-body {
+  padding: 20px;
+}
+.course-card .course-title {
+  color: #4f46e5;
+  font-size: 1.5rem;
+}
+.course-card .course-description {
+  margin-top: 10px;
+  color: #666;
+  line-height: 1.8;
+}
+.course-card .course-price {
+  margin-top: 15px;
+  font-weight: bold;
+}
+.course-card .course-status {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #22c55e;
+}
+@media (max-width: 768px) {
+  .course-card .course-title {
+    font-size: 1.25rem;
+  }
+}
+
+/*
+|--------------------------------------------------------------------------
+| Buttons Component
+|--------------------------------------------------------------------------
+*/
+.btn {
+  padding: 12px 20px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Utilities
+|--------------------------------------------------------------------------
+*/
+.text-primary {
+  color: #4f46e5;
+}
+
+.text-success {
+  color: #22c55e;
+}
+
+.text-danger {
+  color: #ef4444;
+}
+
+.text-warning {
+  color: #f59e0b;
+}
+
+.text-other {
+  color: #8b5cf6;
+}
+
+.mt-1 {
+  margin-top: 10px;
+}
+
+.mt-2 {
+  margin-top: 20px;
+}
+
+.mt-3 {
+  margin-top: 30px;
+}
+
+.mt-4 {
+  margin-top: 40px;
+}
+
+.mt-5 {
+  margin-top: 50px;
+}
+
+/*# sourceMappingURL=style.css.map */
